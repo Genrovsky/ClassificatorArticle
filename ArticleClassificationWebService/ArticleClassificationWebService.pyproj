@@ -1,0 +1,137 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Name>ArticleClassificationWebService</Name>
+    <RootNamespace>ArticleClassificationWebService</RootNamespace>
+    <InterpreterId>MSBuild|pythonEnv|$(MSBuildProjectFullPath)</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>03e1b67c-c823-410e-a816-d7c47de44ea4</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <DjangoSettingsModule>ArticleClassificationWebService.settings</DjangoSettingsModule>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ArticleClassificationWebService\views.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CollectionAndClassificationApp\admin.py" />
+    <Compile Include="CollectionAndClassificationApp\api.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CollectionAndClassificationApp\apps.py" />
+    <Compile Include="CollectionAndClassificationApp\classification.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CollectionAndClassificationApp\collection.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CollectionAndClassificationApp\migrations\__init__.py" />
+    <Compile Include="CollectionAndClassificationApp\models.py" />
+    <Compile Include="CollectionAndClassificationApp\validation.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CollectionAndClassificationApp\views.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CollectionAndClassificationApp\__init__.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="ArticleClassificationWebService\__init__.py" />
+    <Compile Include="ArticleClassificationWebService\settings.py" />
+    <Compile Include="ArticleClassificationWebService\urls.py" />
+    <Compile Include="ArticleClassificationWebService\wsgi.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CollectionAndClassificationApp\static\js\addArticle.js" />
+    <Content Include="CollectionAndClassificationApp\static\js\article.js" />
+    <Content Include="CollectionAndClassificationApp\static\js\classification.js" />
+    <Content Include="CollectionAndClassificationApp\static\js\collection.js" />
+    <Content Include="CollectionAndClassificationApp\static\js\updateArticle.js" />
+    <Content Include="CollectionAndClassificationApp\static\js\validation.js" />
+    <Content Include="CollectionAndClassificationApp\templates\CollectionAndClassificationApp\addArticle.html" />
+    <Content Include="CollectionAndClassificationApp\templates\CollectionAndClassificationApp\article.html" />
+    <Content Include="CollectionAndClassificationApp\templates\CollectionAndClassificationApp\classification.html" />
+    <Content Include="CollectionAndClassificationApp\templates\CollectionAndClassificationApp\collection.html" />
+    <Content Include="CollectionAndClassificationApp\templates\CollectionAndClassificationApp\updateArticle.html" />
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ArticleClassificationWebService\" />
+    <Folder Include="CollectionAndClassificationApp\" />
+    <Folder Include="CollectionAndClassificationApp\migrations\" />
+    <Folder Include="CollectionAndClassificationApp\static\" />
+    <Folder Include="CollectionAndClassificationApp\static\js\" />
+    <Folder Include="CollectionAndClassificationApp\static\media\" />
+    <Folder Include="CollectionAndClassificationApp\templates\" />
+    <Folder Include="CollectionAndClassificationApp\templates\CollectionAndClassificationApp\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="pythonEnv\">
+      <Id>pythonEnv</Id>
+      <Version>3.6</Version>
+      <Description>pythonEnv (Python 3.6 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Коллекция текстов</title>
+</head>
+<body>
+    <div>
+        <div><a href="/">Классификация текста</a></div>
+        <div><a href="/collection">Коллекция текстов</a></div>
+        <div><a href="/add-article">Добавить текст</a></div>
+    </div>
+
+    <div>
+        <div><h1>Коллекция текстов</h1></div>
+
+        <div>
+            <div><button onclick="showAllArticles()">Вся коллекция</button></div>
+            <div>
+                <select id="category">
+                    <option>наука</option>
+                    <option>гаджеты</option>
+                    <option>роботы</option>
+                    <option>техника</option>
+                    <option>космос</option>
+                </select>
+                <button onclick="showArticlesByCategory()">Найти по категории</button>
+            </div>
+            <div>
+                <p>от</p>
+                <input type="text" id="leftDate" placeholder="yyyy-mm-dd" />
+                <p>до</p>
+                <input type="text" id="rightDate" placeholder="yyyy-mm-dd" />
+                <button onclick="showArticlesByDates()">Найти по диапазону дат</button>
+            </div>
+            <div>
+                <input type="text" id="searchline"/>
+                <button onclick="showArticlesBySearchline()">Найти по поисковому запросу</button>
+            </div>
+        </div>
+        <div><p id="getArticlesResultMsg"></p></div>
+        <div><p id="getArticlesErrorMsg"></p></div>
+        <div><img hidden src="/static/media/preloader.gif" id="preloader" height="40" width="40"/></div>
+        <div id="articles"></div>
+        <div id="pageBar"></div>
+    </div>
+
+    <script src="/static/js/validation.js"></script>
+    <script src="/static/js/collection.js"></script>
+    <script defer>
+        showAllArticles();
+    </script>
+</body>
+</html>

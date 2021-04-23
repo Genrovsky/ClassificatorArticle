@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Добавить текста</title>
+</head>
+<body>
+    <div>
+        <div><a href="/">Классификация текста</a></div>
+        <div><a href="/collection">Коллекция текстов</a></div>
+        <div><a href="/add-article">Добавить текст</a></div>
+    </div>
+
+    <div>
+        <div><h1>Добавить текст</h1></div>
+
+        <div>
+            <div><p>Заполните все поля:</p></div>
+            <div>
+                <p>Введите заголовок:</p>
+                <p id="titleErrorMsg"></p>
+                <input type="text" id="title"/>
+            </div>
+            <div>
+                <p>Выбирете категорию</p>
+                <select id="category">
+                    <option>наука</option>
+                    <option>гаджеты</option>
+                    <option>роботы</option>
+                    <option>техника</option>
+                    <option>космос</option>
+                </select>
+            </div>
+            <div>
+                <p>Введите дату публикации:</p>
+                <p id="dateErrorMsg"></p>
+                <input type="text" id="date" placeholder="yyyy-mm-dd"/>
+            </div>
+            <div>
+                <p>Введите текст:</p>
+                <p id="textErrorMsg"></p>
+                <textarea id="text" cols="100" rows="20"></textarea>
+            </div>
+            <div><button onclick="addArticle()">Добавить</button></div>
+            <div><img hidden src="/static/media/preloader.gif" id="preloader" height="40" width="40"/></div>
+            <div><p id="addResultMsg"></p></div>
+            <div><p id="addErrorMsg"></p></div>
+        </div>
+    </div>
+
+    <script src="/static/js/validation.js"></script>
+    <script src="/static/js/addArticle.js"></script>
+</body>
+</html>

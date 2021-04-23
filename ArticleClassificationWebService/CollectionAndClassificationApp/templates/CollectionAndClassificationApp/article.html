@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title id="title"></title>
+</head>
+<body>
+    <div>
+        <div><a href="/">Классификация текста</a></div>
+        <div><a href="/collection">Коллекция текстов</a></div>
+        <div><a href="/add-article">Добавить текст</a></div>
+    </div>
+
+    <div id="articleContent">
+        <div><h1 id="titleH"></h1></div>
+        <div><p id="category"></p></div>
+        <div><p id="date"></p></div>
+        <div><p id="text"></p></div>
+        <div><a id="aUpdate">Редактировать</a></div>
+        <div><button onclick="deleteArticle()">Удалить</button></div>
+        <div><p id="articleErrorMsg"></p></div>
+    </div>
+    <div><img hidden src="/static/media/preloader.gif" id="preloader" height="40" width="40"/></div>
+
+    <script src="/static/js/article.js"></script>
+    <script defer>
+        showArticleContent();
+    </script>
+</body>
+</html>
